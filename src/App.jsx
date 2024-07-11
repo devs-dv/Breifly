@@ -8,7 +8,7 @@ const App = () => {
   return (
     <Router>
       <div>
-        <NavBar />
+        {/* <NavBar /> */}
         <Routes>
           <Route path="/" element={<NewsFeed />} />
           <Route path="/read-more/:id" element={<ReadySec />} />
