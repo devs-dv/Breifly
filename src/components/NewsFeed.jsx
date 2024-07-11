@@ -1,5 +1,8 @@
 import React, { useState, useRef } from "react";
 import NavBar from "./NavBar";
+import { Link } from "react-router-dom";
+
+
 
 const cardData = [
   {
@@ -37,13 +40,21 @@ const buttonLabels = [
   "Music",
   "JavaScript",
   "Mixes",
-  "T-Series",
-  "Pritam Chakraborty",
+  "Breaking News",
+  "World News",
   "Skills",
-  "Amitabh Bhattacharya",
-  "Sushant Singh Rajput",
-  "Strategies",
-  "Indian pop music",
+  "Politics",
+  "Business",
+  "Technology",
+  "Science",
+  "Health",
+  "Entertainment",
+  "Sports",
+  "Environment",
+  "Travel",
+  "Lifestyle",
+  "Opinion",
+  "Education",
 ];
 
 const NewsFeed = () => {
@@ -143,14 +154,13 @@ const NewsFeed = () => {
                     </div>
 
                     <p className="text-gray-500 text-sm">{card.description}</p>
-                    <a
-                      href="#"
-                      class="inline-flex items-center mt-4 font-semibold text-blue-600 lg:mb-0 hover:text-neutral-600"
+                    <Link
+                      to={`/read-more/${index}`}
+                      className="inline-flex items-center mt-4 font-semibold text-blue-600 lg:mb-0 hover:text-neutral-600"
                       title="read more"
                     >
-                      {" "}
-                      Read More »{" "}
-                    </a>
+                      Read More »
+                    </Link>
                     <div className="flex items-center justify-between  mt-3 mb-2">
                       <div className="flex gap-5">
                         <svg
